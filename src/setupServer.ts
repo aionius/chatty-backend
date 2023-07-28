@@ -19,12 +19,9 @@ import { createAdapter } from 'socket.io-redis-adapter';
 import Logger from 'bunyan';
 import 'express-async-errors';
 
-import { config } from './config';
-import routes from './routes';
-import {
-  CustomError,
-  IErrorResponse
-} from './shared/globals/helpers/error-handler';
+import { config } from '@root/config';
+import routes from '@root/routes';
+import { CustomError, IErrorResponse } from '@globals/helpers/error-handler';
 
 const SERVER_PORT: number = 5555;
 const log: Logger = config.createLogger('setupServer');
@@ -149,5 +146,8 @@ export class ChattyServer {
     });
   }
 
-  private socketIOConnection(io: Server): void {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  private socketIOConnection(io: Server): void {
+    log.info('socketIOConnection');
+  }
 }
