@@ -1,0 +1,31 @@
+REDIS DATA TYPES:
+1. Strings
+2. Lists - list of strings sorted in order
+3. Sets - unordered collection of string
+4. Hashes - objects with fields and values
+5. Sorted Sets - just like Sets, the difference is data is stored in a sorted manner
+
+REDIS METHODS:
+1. Lists
+    - LPUSH - prepends one or multiple values to a list
+    - LRANGE - gets a range of elements from a list
+    - LINDEX - gets an element from a list by its indes
+    - LLEN - gets the lenght of a list
+    - LREM - removes elements from a list
+    - LSET - sets the value of an element in a list by its index
+    - RPUSH - appends one or multiple values to a list
+
+2. Sorted Sets
+    - ZADD - adds one or more members to a sorted sets
+    - ZCARD - gets the number of members in a sorted sets
+    - ZCOUNT - returns the number of elements in the sorted set with a score
+               between min and max
+    - ZRANGE - returns a range of members in a sorted set
+    - ZREM - removes one or more member from a sorted set
+
+3. Hashes
+    - HSET - sets the string value of a hash fields
+    - HGET - gets the value of a hash field stored at the specified key
+    - HGETALL - gets all the fields and value stored in a hash at the specified key
+    - HINCRBY - increments the number stored at key by increment
+    - HMGET - returns the values associated with the specified fields in the hash stored at key
